@@ -3,7 +3,7 @@ FROM debian:stretch
 ENV DEBIAN_FRONTEND noninteractive
 
 ARG DT_VERSION=3.3.1
-ARG DT_BUILD=14
+ARG DT_BUILD=16
 
 RUN apt-get update && \
     apt-get install -y \
