@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/opt/bin/dnsthingymgr -c /etc/dnsthingy/dnsthingymgr.conf
+/opt/bin/anmgr -c /etc/adamone/anmgr.conf

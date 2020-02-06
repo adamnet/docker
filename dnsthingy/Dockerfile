@@ -1,9 +1,9 @@
-FROM debian:stretch
+FROM debian:buster
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG DT_VERSION=3.3.1
-ARG DT_BUILD=14
+ARG DT_VERSION=3.4.1
+ARG DT_BUILD=237
 
 RUN apt-get update && \
     apt-get install -y \
@@ -11,9 +11,9 @@ RUN apt-get update && \
     curl
 
 RUN mkdir -p /opt/bin \
-    && curl https://dl.adamnet.works/firmware/debian/debian9-${DT_VERSION}-${DT_BUILD}.tar.gz -o /opt/bin/dnsthingy.tar.gz \
-    && tar -xzf /opt/bin/dnsthingy.tar.gz -C /opt/bin \
-    && rm /opt/bin/dnsthingy.tar.gz
+    && curl https://dl.adamnet.works/firmware/debian/debian9-test-${DT_VERSION}-${DT_BUILD}.tar.gz -o /opt/bin/adamone.tar.gz \
+    && tar -xzf /opt/bin/adamone.tar.gz -C /opt/bin \
+    && rm /opt/bin/adamone.tar.gz
 
 ADD dnsthingy/entry-point.sh /opt/bin/
 
