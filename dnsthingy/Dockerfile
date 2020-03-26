@@ -1,9 +1,9 @@
-FROM debian:buster
+FROM debian:10
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG DT_VERSION=3.4.1
-ARG DT_BUILD=237
+ARG DT_VERSION=3.4.2
+ARG DT_BUILD=1
 
 RUN apt-get update && \
     apt-get install -y \
@@ -11,7 +11,7 @@ RUN apt-get update && \
     curl
 
 RUN mkdir -p /opt/bin \
-    && curl https://dl.adamnet.works/firmware/debian/debian9-test-${DT_VERSION}-${DT_BUILD}.tar.gz -o /opt/bin/adamone.tar.gz \
+    && curl https://dl.adamnet.works/firmware/debian/debian10-test-${DT_VERSION}-${DT_BUILD}.tar.gz -o /opt/bin/adamone.tar.gz \
     && tar -xzf /opt/bin/adamone.tar.gz -C /opt/bin \
     && rm /opt/bin/adamone.tar.gz
 
