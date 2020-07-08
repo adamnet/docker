@@ -3,7 +3,7 @@ FROM debian:10.4
 ENV DEBIAN_FRONTEND noninteractive
 
 ARG DT_VERSION=3.4.4
-ARG DT_BUILD=1
+ARG DT_BUILD=4
 
 RUN apt-get update && \
     apt-get install -y \
