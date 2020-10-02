@@ -1,8 +1,8 @@
-FROM debian:10.4
+FROM debian:10.5
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ARG DT_VERSION=3.4.8
+ARG DT_VERSION=3.4.10
 ARG DT_BUILD=1
 
 RUN apt-get update && \
